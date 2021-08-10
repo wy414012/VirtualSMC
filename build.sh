@@ -72,5 +72,5 @@ if [ $ret -ne 0 ]; then
   exit 1
 fi
 
-xcodebuild -jobs 1 -arch x86_64 -arch ACID32 -configuration Debug
-xcodebuild -jobs 1 -arch x86_64 -arch ACID32 -configuration Release
+xcodebuild -jobs 1 -target Package -configuration Debug -arch ACID32 -arch x86_64
+xcodebuild -jobs 1 -target Package -configuration Release -arch ACID32 -arch x86_64
