@@ -25,10 +25,10 @@ jobs:
           path: MacKernelSDK
       - name: CI Bootstrap
         run: |
-          src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/ocbuild/master/ci-bootstrap.sh) && eval "$src" || exit 1
+          src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/wy414012/ocbuild/master/ci-bootstrap.sh) && eval "$src" || exit 1
       - name: Lilu Bootstrap
         run: |
-          src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/Lilu/master/Lilu/Scripts/bootstrap.sh) && eval "$src" || exit 1
+          src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/wy414012/Lilu/master/Lilu/Scripts/bootstrap.sh) && eval "$src" || exit 1
 
       - run: xcodebuild -jobs 1 -target Package -configuration Debug -arch ACID32 -arch x86_64
       - run: xcodebuild -jobs 1 -target Package -configuration Release -arch ACID32 -arch x86_64
