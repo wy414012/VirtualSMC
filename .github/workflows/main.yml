@@ -13,7 +13,7 @@ env:
 
 jobs:
   build:
-    name: 使用xcode13.0构建
+    name: 使用xcode13.1构建
     runs-on: macos-11
     env:
       JOB_TYPE: BUILD
