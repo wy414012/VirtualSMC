@@ -1,7 +1,7 @@
 VirtualSMC
 ========
 
-[![Build Status](https://github.com/acidanthera/VirtualSMC/workflows/CI/badge.svg?branch=master)](https://github.com/acidanthera/VirtualSMC/actions) [![Scan Status](https://scan.coverity.com/projects/16571/badge.svg?flat=1)](https://scan.coverity.com/projects/16571)
+[![Build Status](https://github.com/acidanthera/VirtualSMC/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/acidanthera/VirtualSMC/actions) [![Scan Status](https://scan.coverity.com/projects/16571/badge.svg?flat=1)](https://scan.coverity.com/projects/16571)
 
 Advanced Apple SMC emulator in the kernel. Requires [Lilu](https://github.com/vit9696/Lilu) for full functioning.
 
@@ -20,7 +20,7 @@ English (Current)
 #### Boot arguments
 - Add `-vsmcdbg` to enable debug printing (available in DEBUG binaries).
 - Add `-vsmcoff` to switch off all the Lilu enhancements.
-- Add `-vsmcbeta` to enable Lilu enhancements on unsupported OS (14 and below are enabled by default).
+- Add `-vsmcbeta` to enable Lilu enhancements on unsupported OS (15 and below are enabled by default).
 - Add `-vsmcrpt` to report about missing SMC keys to the system log.
 - Add `-vsmccomp` to prefer existing hardware SMC implementation if found.
 - Add `vsmcgen=X` to force exposing X-gen SMC device (1 and 2 are supported).
