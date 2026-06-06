@@ -80,12 +80,11 @@ void BatteryManager::checkDevices() {
 		externalPowerConnected = true;
 	}
 
-	externalPowerNotify(externalPowerConnected);
-	DBGLOG("bmgr", "status batteriesConnected %d externalPowerConnected %d batteriesAreFull %d", batteriesConnected, externalPowerConnected, batteriesAreFull);
-	if (externalPowerConnected && batteriesAreFull) {
-		DBGLOG("bmgr", "no poll");
-		return;
+	if (!initialCheckDevices || externalPowerConnected != prevExternalPowerConnected) {
+		externalPowerNotify(externalPowerConnected);
+		prevExternalPowerConnected = externalPowerConnected;
 	}
+	DBGLOG("bmgr", "status batteriesConnected %d externalPowerConnected %d batteriesAreFull %d", batteriesConnected, externalPowerConnected, batteriesAreFull);
 
 	if (decrementQuickPoll()) {
 		DBGLOG("bmgr", "quick poll");
